@@ -1,0 +1,49 @@
+1. Whta typescript does?
+STATIC CHECKING -> Analyses our code as we type. Before running the code at runtime, it will show us error if any.
+
+2. Difference between JS & TS.
+-> TS = Object-Oriented Language, JS = Prototype based Language
+   TS = Static Checking/Typing  , JS = Dynamically Typing
+   TS = Supports Interface      , JS = Doesn't Supports
+
+3. TS is transpiled to JS meaning TS is converted to JS. TS is a development tool and the project is using the JS only.
+   TS is a wrapper around JS with more core scalability, readibility, better code.
+
+4. global installation of TS -> npm install -g typescript
+   project installation of TS -> npm install typescript --save-dev
+   tsc will help us to execute the TS files
+
+5. Type Inference -> TS is smart enough to detect the type of the variable without defining it.
+
+6. To install tsconfig.json file, run ->    tsc --init
+      Created a new tsconfig.json with:                                                                                                                                                                                        TS 
+            target: es2016
+            module: commonjs
+            strict: true
+            esModuleInterop: true
+            skipLibCheck: true
+            forceConsistentCasingInFileNames: true
+
+7. To create a package.json file, run ->    npm init -y
+            {
+                  "name": "ts_for_real_projects",
+                  "version": "1.0.0",
+                  "description": "",
+                  "main": "index.js",
+                  "scripts": {
+                     "test": "echo \"Error: no test specified\" && exit 1"
+                  },
+                  "keywords": [],
+                  "author": "",
+                  "license": "ISC"
+            }
+
+8. create index.html and type  -> ! tab
+9. create src & dist by typing [mkdir src dir] , here src is where we will write out ts code. dist is where the ts will be compiled to js and get prod ready i.e. distribution file
+10. inside src, we will create a ts file. exactly same file for js will be generated in dist folder for compilation. But how? 
+      in tsconfig.json file, set 'outDir = "./dist' to the path of dist folder
+11. install live server & lite-server
+      the moment we install  lite-server -> package-lock.json file gets generated
+12. to ways to run the server -> live server & lite-server.
+      if we run it through index.html then its live server
+      if we run it through package.json script, where we specify in script that "start" : "lite-server". then just npm start -> locahost:3000
